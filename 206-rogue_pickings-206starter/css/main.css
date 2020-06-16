@@ -17,9 +17,9 @@ body {
 	width: 90%;
 	margin: 0 auto;
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-	}
 }
 
 h1,
@@ -56,6 +56,7 @@ header {
 	align-items: center;
 	width: 100%;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 header h1 {
@@ -63,15 +64,18 @@ header h1 {
 	padding: 38px 0;
 	justify-content: flex-start;
 	text-transform: uppercase;
+	max-width: 100%;
 }
 
 header h1 span {
 	color: #77a466;
+	max-width: 100%;
 }
 
 header nav {
 	padding: 46px 0;
 	justify-content: flex-end;
+	max-width: 100%;
 }
 
 header nav ul li {
@@ -80,7 +84,7 @@ header nav ul li {
 	font-size: 1em;
 	padding: 0 10px;
 	list-style: none;
-	display: inline-flex;
+	display: inline-block;
 }
 
 header nav ul li a{
@@ -106,6 +110,7 @@ header nav ul li a{
 
 .main-image img {
 	border-bottom: 3px solid #77a466;
+	max-width: 100%;
 }
 
 .main-title h3 {
