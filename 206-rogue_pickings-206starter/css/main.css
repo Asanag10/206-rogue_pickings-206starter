@@ -1,6 +1,4 @@
 html {
-	height: 100%;
-	width: 100%;
 	font-size: 16px;
   }
 
@@ -30,61 +28,55 @@ h4 {
 	text-transform: uppercase;
 	font-weight: 700;
 }
-h1 {
-	font-size: 2.5em;
-}
-h2 {
-    font-size: 2em;
-}
-h3 {
-	font-size: 1.5em;
-}
-h4 {
-	font-size: 1em;
-}
 
 p {
-	font-size: 1.2em;
-	line-height: 2.2em;
+	font-size: 0.875em;
     padding: 0 30px;
+}
+
+ul {
+    margin: 0;
 }
 
 /*The widths are in a percentage!*/
 header {
 	border-bottom: 3px solid #77a466;
-	display: flex;
-	align-items: center;
-	width: 100%;
-	justify-content: space-between;
-	flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 header h1 {
+	font-size: 1.875em;
 	margin: 0;
-	padding: 38px 0;
-	justify-content: flex-start;
-	text-transform: uppercase;
-	max-width: 100%;
+	padding: 38px 20px 20px 20px; 
+    border-bottom: 3px solid #77a466; 
+	width: 100%;
 }
 
 header h1 span {
 	color: #77a466;
-	max-width: 100%;
 }
 
 header nav {
-	padding: 46px 0;
-	justify-content: flex-end;
+	padding: 20px 0;
 	max-width: 100%;
+}
+
+header nav ul {
+	margin: 0;
+	padding: 0;
 }
 
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 1em;
-	padding: 0 10px;
+	font-size: 0.875em;
+	padding: 10px 0;
 	list-style: none;
-	display: inline-block;
 }
 
 header nav ul li a{
@@ -93,24 +85,17 @@ header nav ul li a{
 }
 
 /*The widths are in a percentage!*/
-.top-section {
-	margin: 0 auto;
-	display: flex;
-  	justify-content: center;
-	flex-flow: row wrap;
-	width: 100%;	  
-}
+.top-section,
 .bottom-section {
-	margin: 0 auto;
 	display: flex;
-  	flex-flow: row wrap;
-	justify-items: flex-start;
-	width: 100%;
+    justify-content: center;
+    align-items: center;
+	flex-flow: row wrap;
 }
 
 .main-image img {
+	width: 100%;
 	border-bottom: 3px solid #77a466;
-	max-width: 100%;
 }
 
 .main-title h3 {
@@ -120,65 +105,95 @@ header nav ul li a{
 }
 .main-title p {
 	padding: 0 0 10px 0;
-	border-bottom: 3px solid #eee;
+	font-size: 1em;
+	line-height: 1.5625em;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	flex-basis: 390px;
-}
-
-.section-one h4 {
-	padding: 0;
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-	flex-grow: 1;
-}
-
-.section-two h4,
-.section-three h4 {
-	padding: 0 30px;
+	border-top: 1px solid #eee;
+    width: 100%;
 }
 
 .menu {
 	list-style: none;
 	padding: 0;
-	line-height: 3em;
 }
 
 .menu li {
+	padding: 10px 0;
 	color:#77a466;
-	font-size: 1.2em;
 }
 
 .reviews {
 	color: #333;
-	font-size: 1.2em;
-	line-height: 1.5em;
+	font-size: 1em;
+	line-height: 1.3125em;
 }
 
 .address {
-	font-size: 1.2em;
+	font-size: 1em;
 	line-height: 1.5em;
 }
 
 /*The widths are in a percentage!*/
 footer {
 	border-top: 3px solid #eee;
-	margin: 0 auto;
-	text-align: center;
-	display: flex;
-  	justify-content: center;
-	align-items: center;
-	width: 100%;
+    text-align: center;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
+
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 1.2em;
+	font-size: 0.875em;
+}
+
+@media only screen and (min-width: 768px) {
+    .bottom-section{
+        justify-content: space-between;
+        align-items: flex-start;
+        border-top: 1px solid #eee;
+    }
+
+    .section-one,
+    .section-two,
+    .section-three {
+        border-top: none;
+        flex-basis: 30%;
+    }
+
+    .section-two {
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        width: 30%;
+        padding: 0;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    header nav {
+        width: 40%;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
 }
